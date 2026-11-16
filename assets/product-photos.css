@@ -1,0 +1,82 @@
+/* Shared by every generated page, including products created in /admin.
+   Keep the existing media dimensions; fit the original image inside them. */
+.catalog-gallery,
+.season-img,
+.chosen-photo,
+.product-media,
+.category-image,
+.cuadro-real,
+.mini-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* A slide must not use its image's intrinsic height to size the grid track.
+   The inset gives percentage image limits a definite containing block. */
+.catalog-gallery {
+  position: relative;
+}
+.catalog-gallery .slide {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 14px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.catalog-gallery .slide.active {
+  display: flex;
+}
+
+.catalog-gallery .slide img,
+.season-img img,
+.chosen-photo img,
+.product-media img,
+.category-image img,
+.cuadro-real img,
+.mini-photo img,
+.pack-highlight img {
+  display: block;
+  position: static;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  margin: auto;
+  flex: 0 1 auto;
+  transform: none;
+}
+
+/* Preserve the existing 10px inset around homepage and category photos. */
+.season-img img,
+.chosen-photo img,
+.product-media img,
+.category-image img {
+  max-width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+}
+
+/* These galleries have intrinsic height rather than a fixed media slot.
+   Keep their original minimum outer heights, without stretching the image. */
+.cuadro-real {
+  min-height: 282px;
+  flex-direction: column;
+}
+@media (max-width: 620px) {
+  .cuadro-real { min-height: 212px; }
+}
+.pack-highlight img {
+  max-height: 520px;
+}
