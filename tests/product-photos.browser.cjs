@@ -30,6 +30,8 @@ const selector='.catalog-gallery .slide.active img,.season-img img,.chosen-photo
      if(count>1)await car.locator('.next').click();
     }
     await checkVisibleImages(page);
+    const slots=await page.locator('.catalog-gallery,.season-img,.chosen-photo,.cuadro-real,.mini-photo').evaluateAll(xs=>xs.map(x=>{const r=x.getBoundingClientRect();return r.width/r.height}));
+    for(const ratio of slots)assert(Math.abs(ratio-16/9)<0.02,`${name}: slot ratio ${ratio}`);
     await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
     await page.screenshot({path:`/tmp/meva-product-photos/${name}-${width}.png`,fullPage:true});
    }
@@ -37,12 +39,12 @@ const selector='.catalog-gallery .slide.active img,.season-img img,.chosen-photo
   // Same markup as /admin-generated products: verify wide, tall, square and
   // small original dimensions in all fixed-size photo slots, without upscaling.
   await page.goto(`${base}/navidad.html`);
-  for(const [w,h] of [[1200,400],[400,1200],[800,800],[60,40]]){
+  for(const [w,h] of [[1600,900],[1200,400],[400,1200],[800,800],[60,40]]){
    for(const frame of ['catalog-gallery','season-img','chosen-photo','product-media','category-image','mini-photo']){
     await page.evaluate(({frame,w,h})=>{
      document.getElementById('photo-fixture')?.remove();
      const box=document.createElement('div');box.id='photo-fixture';box.className=frame;
-     box.style.cssText='position:relative;width:300px;height:180px';
+     box.style.cssText='position:relative;width:320px';
      const img=new Image();img.src='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><rect x="1" y="1" width="${w-2}" height="${h-2}" fill="lightblue" stroke="black"/><text x="5" y="20">${w} × ${h}</text></svg>`);
      if(frame==='catalog-gallery'){const slide=document.createElement('div');slide.className='slide active';slide.append(img);box.append(slide)}else box.append(img);
      document.querySelector('main').prepend(box);
@@ -60,7 +62,7 @@ async function checkVisibleImages(page,custom=selector){
  const results=await page.locator(custom).evaluateAll(xs=>xs.filter(i=>i.naturalWidth&&i.getBoundingClientRect().width).map(i=>{
   const slot=i.closest('.catalog-gallery,.season-img,.chosen-photo,.cuadro-real,.mini-photo,.product-media,.category-image');
   const a=i.getBoundingClientRect(), b=slot.getBoundingClientRect(), css=getComputedStyle(i);
-  return {src:i.getAttribute('src'),w:a.width,h:a.height,nw:i.naturalWidth,nh:i.naturalHeight,fit:css.objectFit,inside:a.left>=b.left-1&&a.right<=b.right+1&&a.top>=b.top-1&&a.bottom<=b.bottom+1,centerX:Math.abs((a.left+a.right-b.left-b.right)/2),centerY:Math.abs((a.top+a.bottom-b.top-b.bottom)/2),slotHeight:b.height,catalog:slot.classList.contains('catalog-gallery')};
+  return {src:i.getAttribute('src'),w:a.width,h:a.height,nw:i.naturalWidth,nh:i.naturalHeight,fit:css.objectFit,inside:a.left>=b.left-1&&a.right<=b.right+1&&a.top>=b.top-1&&a.bottom<=b.bottom+1,centerX:Math.abs((a.left+a.right-b.left-b.right)/2),centerY:Math.abs((a.top+a.bottom-b.top-b.bottom)/2),slotWidth:b.width,slotHeight:b.height,catalog:slot.classList.contains('catalog-gallery')};
  }));
  for(const r of results){
   assert(r.inside,`Clipped: ${JSON.stringify(r)}`);
@@ -68,6 +70,7 @@ async function checkVisibleImages(page,custom=selector){
   assert(r.w<=r.nw+1&&r.h<=r.nh+1,`Upscaled: ${r.src}`);
   assert(Math.abs(r.w/r.h-r.nw/r.nh)<0.02,`Distorted: ${r.src}`);
   assert(r.centerX<=1&&r.centerY<=1,`Off center: ${JSON.stringify(r)}`);
-  if(r.catalog)assert([180,220].some(h=>Math.abs(r.slotHeight-h)<1),`Resized slot: ${r.slotHeight}`);
+  assert(Math.abs(r.slotWidth/r.slotHeight-16/9)<0.02,`Not 16:9: ${JSON.stringify(r)}`);
+  if(Math.abs(r.nw/r.nh-16/9)<0.001&&r.nw>=r.slotWidth&&r.nh>=r.slotHeight)assert(r.w>=r.slotWidth-3&&r.h>=r.slotHeight-3,`16:9 photo does not fill slot: ${r.src}`);
  }
 }

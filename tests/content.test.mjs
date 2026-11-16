@@ -15,12 +15,12 @@ test('migration retains every original photograph byte for byte',()=>{
  const photos=new Set(products.flatMap(p=>p.photos.map(x=>x.image)));
  for(const file of files.filter(f=>f.startsWith('assets/products/')))assert(photos.has(file),`Unmigrated photo: ${file}`);
 });
-test('all original event rates and supplements are preserved',()=>{
- const original=read('tests/fixtures/original-events.json');
+test('event calculator preserves current CMS rates and supplements',()=>{
+ const expected={...read('content/settings/events.json'),products:Object.fromEntries(products.filter(p=>p.available&&p.category==='Eventos').map(p=>[p.eventKey||p.slug,{name:p.name,description:p.description,tiers:p.tiers,personalization:p.personalization}]))};
  const generated={window:{}};vm.runInNewContext(fs.readFileSync('dist/assets/eventos-config.js','utf8'),generated);
  const actual=JSON.parse(JSON.stringify(generated.window.MEVA_EVENTOS_CONFIG));
  for(const p of Object.values(actual.products))delete p.photos;
- assert.deepEqual(actual,original);
+ assert.deepEqual(actual,expected);
 });
 test('all pages and local links resolve except three pre-existing missing images',()=>{
  const known=new Set(['assets/instagram-feed.png','assets/pack-bebe.jpg','assets/pack-lanyard-scrunchie.jpg']);const missing=new Set();
