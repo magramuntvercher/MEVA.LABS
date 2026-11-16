@@ -59,10 +59,14 @@ Se conservó el estado previo en la rama Git local **`backup/pre-cms-2026-11-16`
 - La portada tenía «Pack bebé: 16 €» y «Neceser: Desde 9 €», mientras sus fichas indicaban «según cantidad» y 7 € respectivamente. Se han conservado **ambos textos originales**, sin inventar una solución. En Portada hay un campo «Texto de precio excepcional»: vaciarlo hace que use automáticamente el precio central del producto.
 - El producto Pack coordinado ya existía en portada; ahora tiene una entrada administrable en Packs, sin asignarle un precio inventado.
 - Algunos productos no tenían fotos o precio: siguen sin fotos y con «Consultar».
-- Ya faltaban estos archivos, referenciados en la portada: `assets/pack-lanyard-scrunchie.jpg`, `assets/pack-bebe.jpg`, `assets/instagram-feed.png`. Se conservan las referencias sin fabricar imágenes. Sube las fotos originales que correspondan o elige una fotografía existente para las dos selecciones de temporada. La imagen de Instagram sigue en la plantilla porque no se ha solicitado administrar esa sección.
+- Siguen faltando estos archivos, referenciados en la portada: `assets/pack-lanyard-scrunchie.jpg`, `assets/pack-bebe.jpg`. La referencia a `assets/instagram-feed.png`, que también faltaba, se ha sustituido por la integración de publicaciones reales. Se conservan las referencias sin fabricar imágenes. Sube las fotos originales que correspondan o elige una fotografía existente para las dos selecciones de temporada.
 
 ### Validación
 
-`npm test` comprueba integridad de fotografías, migración de tarifas, enlaces locales, configuración CMS y propagación de altas, bajas y cambios de datos a las páginas generadas. La prueba considera explícitamente las tres imágenes que ya faltaban; no las declara correctas.
+`npm test` comprueba integridad de fotografías, migración de tarifas, enlaces locales, configuración CMS y propagación de altas, bajas y cambios de datos a las páginas generadas. La prueba considera explícitamente las dos imágenes de temporada que ya faltaban; no las declara correctas.
 
 Se comprobó además en Chromium: las nueve páginas, carruseles, menú móvil, selectores de diseño, bordado y observaciones, construcción de mensajes de WhatsApp sin enviarlos, límites y tramos de Eventos, suplementos, packaging y añadir/quitar líneas. La pantalla de login de Decap y su configuración se comprueban sin iniciar sesión ni publicar contenido real.
+
+## Publicaciones reales de Instagram
+
+La portada consulta una Netlify Function con caché. Para activar la cuenta profesional @meva.labs, configurar las credenciales de Meta en Netlify y mantener el token, consulta [docs/instagram.md](docs/instagram.md). No se publican tokens ni publicaciones de muestra.

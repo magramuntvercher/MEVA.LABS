@@ -22,8 +22,8 @@ test('event calculator preserves current CMS rates and supplements',()=>{
  for(const p of Object.values(actual.products))delete p.photos;
  assert.deepEqual(actual,expected);
 });
-test('all pages and local links resolve except three pre-existing missing images',()=>{
- const known=new Set(['assets/instagram-feed.png','assets/pack-bebe.jpg','assets/pack-lanyard-scrunchie.jpg']);const missing=new Set();
+test('all pages and local links resolve except two pre-existing missing images',()=>{
+ const known=new Set(['assets/pack-bebe.jpg','assets/pack-lanyard-scrunchie.jpg']);const missing=new Set();
  for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.html'))){
   const html=fs.readFileSync('dist/'+file,'utf8');assert(!html.includes('{{'));assert(html.includes('assets/general-config.js'));
   for(const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)){
@@ -58,4 +58,9 @@ test('CMS edits propagate to category, homepage, design, settings and events; de
   const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.join(tmp,'dist/assets/productos-config.js'),'utf8'),ctx);
   assert(!ctx.window.MEVA_TELAS.some(f=>f.id==='tartan-rojo'));assert(!ctx.window.MEVA_PRODUCTOS.some(p=>p.nombre==='Lanyard'));assert(ctx.window.MEVA_PRODUCTOS.some(p=>p.nombre==='Producto de prueba'));
  }finally{fs.rmSync(tmp,{recursive:true,force:true})}
+});
+
+test('homepage replaces the static screenshot; other pages do not load the feed',()=>{
+ const home=fs.readFileSync('dist/index.html','utf8');assert(!home.includes('assets/instagram-feed.png'));assert(home.includes('data-instagram-feed'));assert(home.includes('instagram-feed.js'));
+ for(const file of fs.readdirSync('dist').filter(f=>f.endsWith('.html')&&f!=='index.html'))assert(!fs.readFileSync(`dist/${file}`,'utf8').includes('instagram-feed.js'));
 });
