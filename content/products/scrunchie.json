@@ -1,0 +1,40 @@
+{
+  "name": "Scrunchie",
+  "slug": "scrunchie",
+  "category": "Accesorios",
+  "description": "",
+  "price": 3.5,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/scrunchie_coral.jpg",
+      "alt": "Scrunchies MEVA"
+    },
+    {
+      "image": "assets/products/scrunchie_mostaza.jpg",
+      "alt": "Scrunchies MEVA"
+    },
+    {
+      "image": "assets/products/scrunchie_floral_rojo.jpg",
+      "alt": "Scrunchies MEVA"
+    },
+    {
+      "image": "assets/products/scrunchie_amarillo_gris.jpg",
+      "alt": "Scrunchies MEVA"
+    },
+    {
+      "image": "assets/products/scrunchie_floral_azul.jpg",
+      "alt": "Scrunchies MEVA"
+    },
+    {
+      "image": "assets/products/scrunchie_burdeos.jpg",
+      "alt": "Scrunchies MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 2
+}

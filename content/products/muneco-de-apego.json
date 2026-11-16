@@ -1,0 +1,15 @@
+{
+  "name": "Muñeco de apego",
+  "slug": "muneco-de-apego",
+  "category": "Infantil",
+  "description": "",
+  "price": 10.0,
+  "embroideredPrice": 12.0,
+  "priceLabel": "Consultar",
+  "photos": [],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 4
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Bandana",
+  "slug": "bandana",
+  "category": "Infantil",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/bandana_jirafas.jpg",
+      "alt": "Bandana"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 2
+}

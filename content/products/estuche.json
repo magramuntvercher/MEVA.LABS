@@ -1,0 +1,20 @@
+{
+  "name": "Estuche",
+  "slug": "estuche",
+  "category": "Organización",
+  "description": "",
+  "price": 8.0,
+  "embroideredPrice": 9.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/estuche_burdeos_rosa.jpg",
+      "alt": "Estuche MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 4
+}

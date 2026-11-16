@@ -1,0 +1,28 @@
+{
+  "name": "Neceser box",
+  "slug": "neceser-box",
+  "category": "Organización",
+  "description": "",
+  "price": 8.0,
+  "embroideredPrice": 9.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/neceser_box_ilustrado.jpg",
+      "alt": "Neceser box MEVA"
+    },
+    {
+      "image": "assets/products/neceser_box_vichy_beige.jpg",
+      "alt": "Neceser box MEVA"
+    },
+    {
+      "image": "assets/products/neceser_box_burdeos_rosa.jpg",
+      "alt": "Neceser box MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 2
+}

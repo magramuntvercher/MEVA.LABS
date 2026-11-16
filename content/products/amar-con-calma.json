@@ -1,0 +1,20 @@
+{
+  "name": "amar con calma",
+  "slug": "amar-con-calma",
+  "category": "Cuadros bordados",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/cuadro_amar_con_calma.jpg",
+      "alt": "Cuadro bordado: amar con calma"
+    }
+  ],
+  "available": true,
+  "chooseFabric": false,
+  "featured": false,
+  "seasonal": false,
+  "order": 1
+}

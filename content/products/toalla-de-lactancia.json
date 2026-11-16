@@ -1,0 +1,20 @@
+{
+  "name": "Toalla de lactancia",
+  "slug": "toalla-de-lactancia",
+  "category": "Infantil",
+  "description": "",
+  "price": 5.0,
+  "embroideredPrice": 7.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/toalla_lactancia_jirafas.jpg",
+      "alt": "Toalla de lactancia"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 1
+}

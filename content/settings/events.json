@@ -1,0 +1,24 @@
+{
+  "minQuantity": 10,
+  "maxAutoQuantity": 100,
+  "packaging": [
+    {
+      "id": "basic",
+      "label": "Básico",
+      "description": "Etiqueta MEVA y entrega agrupada",
+      "extra": 0
+    },
+    {
+      "id": "card",
+      "label": "Tarjeta personalizada",
+      "description": "Tarjeta personalizada por unidad",
+      "extra": 0.4
+    },
+    {
+      "id": "gift",
+      "label": "Regalo completo",
+      "description": "Tarjeta + bolsita individual",
+      "extra": 0.8
+    }
+  ]
+}

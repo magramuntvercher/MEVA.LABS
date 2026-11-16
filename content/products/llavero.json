@@ -1,0 +1,36 @@
+{
+  "name": "Llavero",
+  "slug": "llavero",
+  "category": "Accesorios",
+  "description": "",
+  "price": 3.5,
+  "embroideredPrice": 4.5,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/llavero_amarillo_gris.jpg",
+      "alt": "Llaveros MEVA"
+    },
+    {
+      "image": "assets/products/llavero_verde_inicial_P.jpg",
+      "alt": "Llaveros MEVA"
+    },
+    {
+      "image": "assets/products/llavero_coral_gris.jpg",
+      "alt": "Llaveros MEVA"
+    },
+    {
+      "image": "assets/products/llavero_burdeos.jpg",
+      "alt": "Llaveros MEVA"
+    },
+    {
+      "image": "assets/products/llavero_burdeos_rosa.jpg",
+      "alt": "Llaveros MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": true,
+  "seasonal": false,
+  "order": 0
+}

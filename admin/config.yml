@@ -1,0 +1,454 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "magramuntvercher/MEVA.LABS",
+    "branch": "main"
+  },
+  "locale": "es",
+  "media_folder": "assets/uploads",
+  "public_folder": "/assets/uploads",
+  "publish_mode": "simple",
+  "collections": [
+    {
+      "name": "products",
+      "label": "Productos",
+      "label_singular": "Producto",
+      "folder": "content/products",
+      "create": true,
+      "delete": true,
+      "format": "json",
+      "extension": "json",
+      "identifier_field": "name",
+      "slug": "{{fields.slug}}",
+      "summary": "{{name}} · {{category}}",
+      "sortable_fields": [
+        "order",
+        "name",
+        "category"
+      ],
+      "fields": [
+        {
+          "name": "name",
+          "label": "Nombre",
+          "widget": "string"
+        },
+        {
+          "name": "slug",
+          "label": "Identificador (estable)",
+          "widget": "string",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Usa letras minúsculas, números y guiones."
+          ]
+        },
+        {
+          "name": "category",
+          "label": "Categoría",
+          "widget": "select",
+          "options": [
+            "Accesorios",
+            "Organización",
+            "Infantil",
+            "Packs",
+            "Cuadros bordados",
+            "Navidad",
+            "Eventos"
+          ]
+        },
+        {
+          "name": "description",
+          "label": "Descripción",
+          "widget": "text",
+          "required": false,
+          "default": ""
+        },
+        {
+          "name": "price",
+          "label": "Precio (€; vacío si se consulta)",
+          "widget": "number",
+          "value_type": "float",
+          "min": 0,
+          "required": false
+        },
+        {
+          "name": "embroideredPrice",
+          "label": "Precio con bordado (€)",
+          "widget": "number",
+          "value_type": "float",
+          "min": 0,
+          "required": false
+        },
+        {
+          "name": "priceLabel",
+          "label": "Texto cuando no hay precio",
+          "widget": "string",
+          "default": "Consultar",
+          "required": false
+        },
+        {
+          "name": "photos",
+          "label": "Fotografías originales",
+          "widget": "list",
+          "required": false,
+          "fields": [
+            {
+              "name": "image",
+              "label": "Fotografía",
+              "widget": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Texto alternativo",
+              "widget": "string",
+              "required": false,
+              "default": ""
+            }
+          ]
+        },
+        {
+          "name": "available",
+          "label": "Disponible",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "chooseFabric",
+          "label": "Permite elegir tejido",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "featured",
+          "label": "Los más elegidos",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "seasonal",
+          "label": "En temporada",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "order",
+          "label": "Orden",
+          "widget": "number",
+          "value_type": "float",
+          "min": 0,
+          "default": 0
+        },
+        {
+          "name": "eventKey",
+          "label": "Identificador del configurador (solo Eventos; conservar los existentes)",
+          "widget": "string",
+          "required": false,
+          "default": ""
+        },
+        {
+          "name": "tiers",
+          "label": "Tarifas por cantidad (obligatorio para Eventos)",
+          "widget": "list",
+          "required": false,
+          "fields": [
+            {
+              "name": "min",
+              "label": "Desde unidades",
+              "widget": "number",
+              "value_type": "int",
+              "min": 1
+            },
+            {
+              "name": "max",
+              "label": "Hasta unidades",
+              "widget": "number",
+              "value_type": "int",
+              "min": 1
+            },
+            {
+              "name": "price",
+              "label": "Precio por unidad",
+              "widget": "number",
+              "value_type": "float",
+              "min": 0
+            }
+          ]
+        },
+        {
+          "name": "personalization",
+          "label": "Personalización para Eventos",
+          "widget": "list",
+          "required": false,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "widget": "string"
+            },
+            {
+              "name": "label",
+              "label": "Nombre",
+              "widget": "string"
+            },
+            {
+              "name": "extra",
+              "label": "Suplemento por unidad",
+              "widget": "number",
+              "value_type": "float",
+              "min": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fabrics",
+      "label": "Tejidos",
+      "label_singular": "Tejido",
+      "folder": "content/fabrics",
+      "create": true,
+      "delete": true,
+      "format": "json",
+      "extension": "json",
+      "identifier_field": "name",
+      "slug": "{{fields.slug}}",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Nombre",
+          "widget": "string"
+        },
+        {
+          "name": "slug",
+          "label": "Identificador",
+          "widget": "string",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Letras minúsculas, números y guiones"
+          ]
+        },
+        {
+          "name": "photo",
+          "label": "Fotografía opcional",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "name": "available",
+          "label": "Disponible (desactivar si está agotado)",
+          "widget": "boolean",
+          "default": true
+        },
+        {
+          "name": "order",
+          "label": "Orden",
+          "widget": "number",
+          "value_type": "float",
+          "min": 0,
+          "default": 0
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "Portada y configuración",
+      "files": [
+        {
+          "name": "home",
+          "label": "Portada",
+          "file": "content/settings/home.json",
+          "fields": [
+            {
+              "name": "seasonTitle",
+              "label": "Título de temporada",
+              "widget": "string"
+            },
+            {
+              "name": "seasonNote",
+              "label": "Nota de temporada",
+              "widget": "string"
+            },
+            {
+              "name": "featured",
+              "label": "Orden de Los más elegidos",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "product",
+                  "label": "Producto",
+                  "widget": "relation",
+                  "collection": "products",
+                  "search_fields": [
+                    "name",
+                    "slug"
+                  ],
+                  "value_field": "slug",
+                  "display_fields": [
+                    "name"
+                  ]
+                },
+                {
+                  "name": "label",
+                  "label": "Nombre en portada (opcional)",
+                  "widget": "string",
+                  "required": false,
+                  "default": ""
+                },
+                {
+                  "name": "photo",
+                  "label": "Foto en portada (vacío conserva el hueco actual)",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "name": "priceLabel",
+                  "label": "Texto de precio excepcional (vacío usa precio del producto)",
+                  "widget": "string",
+                  "required": false,
+                  "default": ""
+                }
+              ]
+            },
+            {
+              "name": "seasonal",
+              "label": "Orden de En temporada",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "product",
+                  "label": "Producto",
+                  "widget": "relation",
+                  "collection": "products",
+                  "search_fields": [
+                    "name",
+                    "slug"
+                  ],
+                  "value_field": "slug",
+                  "display_fields": [
+                    "name"
+                  ]
+                },
+                {
+                  "name": "label",
+                  "label": "Nombre en portada (opcional)",
+                  "widget": "string",
+                  "required": false,
+                  "default": ""
+                },
+                {
+                  "name": "photo",
+                  "label": "Foto en portada (vacío conserva el hueco actual)",
+                  "widget": "image",
+                  "required": false
+                },
+                {
+                  "name": "subtitle",
+                  "label": "Subtítulo",
+                  "widget": "string",
+                  "required": false,
+                  "default": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "general",
+          "label": "Configuración general",
+          "file": "content/settings/general.json",
+          "fields": [
+            {
+              "name": "shipping",
+              "label": "Gastos de envío (€)",
+              "widget": "number",
+              "value_type": "float",
+              "min": 0
+            },
+            {
+              "name": "freeShipping",
+              "label": "Importe para envío gratis (€)",
+              "widget": "number",
+              "value_type": "float",
+              "min": 0
+            },
+            {
+              "name": "whatsapp",
+              "label": "WhatsApp con prefijo internacional, solo números",
+              "widget": "string",
+              "pattern": [
+                "^[0-9]{7,15}$",
+                "Solo números, sin + ni espacios"
+              ]
+            },
+            {
+              "name": "instagram",
+              "label": "Instagram (URL completa)",
+              "widget": "string"
+            },
+            {
+              "name": "instagramHandle",
+              "label": "Nombre de Instagram",
+              "widget": "string"
+            },
+            {
+              "name": "email",
+              "label": "Email",
+              "widget": "string"
+            }
+          ]
+        },
+        {
+          "name": "events",
+          "label": "Eventos: cantidades y packaging",
+          "file": "content/settings/events.json",
+          "fields": [
+            {
+              "name": "minQuantity",
+              "label": "Pedido mínimo",
+              "widget": "number",
+              "value_type": "int",
+              "min": 1
+            },
+            {
+              "name": "maxAutoQuantity",
+              "label": "Máximo automático",
+              "widget": "number",
+              "value_type": "int",
+              "min": 1
+            },
+            {
+              "name": "packaging",
+              "label": "Packaging",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "Identificador (conservar)",
+                  "widget": "string"
+                },
+                {
+                  "name": "label",
+                  "label": "Nombre",
+                  "widget": "string"
+                },
+                {
+                  "name": "description",
+                  "label": "Descripción",
+                  "widget": "string",
+                  "required": false,
+                  "default": ""
+                },
+                {
+                  "name": "extra",
+                  "label": "Suplemento por unidad",
+                  "widget": "number",
+                  "value_type": "float",
+                  "min": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

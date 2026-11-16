@@ -1,0 +1,20 @@
+{
+  "name": "quizá hogar es donde el corazón está en calma",
+  "slug": "quiza-hogar-es-donde-el-corazon-esta-en-calma",
+  "category": "Cuadros bordados",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/cuadro_hogar_calma.jpg",
+      "alt": "Cuadro bordado: quizá hogar es donde el corazón está en calma"
+    }
+  ],
+  "available": true,
+  "chooseFabric": false,
+  "featured": false,
+  "seasonal": false,
+  "order": 0
+}

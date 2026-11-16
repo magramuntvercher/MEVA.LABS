@@ -1,0 +1,50 @@
+{
+  "name": "Llavero bordado",
+  "slug": "llavero-bordado",
+  "category": "Eventos",
+  "description": "Bordado sencillo incluido cuando es igual en todas las unidades.",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Según cantidad",
+  "photos": [],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 1,
+  "eventKey": "llavero_bordado",
+  "tiers": [
+    {
+      "min": 10,
+      "max": 30,
+      "price": 4
+    },
+    {
+      "min": 31,
+      "max": 50,
+      "price": 3.5
+    },
+    {
+      "min": 51,
+      "max": 79,
+      "price": 3
+    },
+    {
+      "min": 80,
+      "max": 100,
+      "price": 2.75
+    }
+  ],
+  "personalization": [
+    {
+      "id": "same",
+      "label": "Mismo bordado en todas",
+      "extra": 0
+    },
+    {
+      "id": "names",
+      "label": "Nombres diferentes",
+      "extra": 1
+    }
+  ]
+}

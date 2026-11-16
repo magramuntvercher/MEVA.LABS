@@ -491,7 +491,7 @@ main{overflow-x:hidden}
   object-fit:contain !important;
   margin:auto !important;
 }
-</style></head><body><div class="topbar">Envíos 4,50€. Gratis pedidos de más de 50€</div><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo-meva.png" alt="MEVA"><span>MEVA</span></a><nav class="desktop-nav"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a></nav><button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a><a href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank">Instagram</a></div></header><main>
+</style></head><body><div class="topbar">{{SHIPPING_BANNER}}</div><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo-meva.png" alt="MEVA"><span>MEVA</span></a><nav class="desktop-nav"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a></nav><button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a><a href="{{INSTAGRAM_URL}}" target="_blank">Instagram</a></div></header><main>
 <section class="hero hero-clean">
   <div class="container">
     <div class="hero-copy">
@@ -515,19 +515,12 @@ main{overflow-x:hidden}
   <div class="season-topline">
     <div>
       <span class="season-kicker">En temporada</span>
-      <h2>Navidad</h2>
+      <h2>{{SEASON_TITLE}}</h2>
     </div>
-    <span class="season-note">Edición limitada</span>
+    <span class="season-note">{{SEASON_NOTE}}</span>
   </div>
   <div class="season-strip" aria-label="Productos de temporada">
-    <article class="season-card">
-      <div class="season-img"><img src="assets/pack-lanyard-scrunchie.jpg" alt="Pack coordinado MEVA"></div>
-      <div class="season-meta"><b>Pack coordinado</b><span>Lanyard + scrunchie</span></div>
-    </article>
-    <article class="season-card">
-      <div class="season-img"><img src="assets/pack-bebe.jpg" alt="Pack bebé MEVA"></div>
-      <div class="season-meta"><b>Pack bebé</b><span>Un detalle especial</span></div>
-    </article>
+    {{SEASONAL}}
     <a class="season-card season-more" href="accesorios.html">
       <div class="season-more-inner"><span>Ver todos los productos</span><strong>→</strong></div>
     </a>
@@ -543,23 +536,17 @@ main{overflow-x:hidden}
 <a class="category category-clickable compact-category category-events" href="eventos.html"><div class="category-copy"><div><h3>Eventos</h3><p>Pedidos en cantidad para celebraciones, grupos y eventos.</p></div><span class="category-arrow">→</span></div></a>
 </div></div></section>
 <section class="chosen-section"><div class="container"><div class="section-head chosen-head"><h2>Los más elegidos</h2></div>
-<div class="chosen-strip" aria-label="Los más elegidos">
-  <article class="chosen-card"><div class="chosen-photo"><img src="assets/products/llavero_coral_gris.jpg" alt="Llavero MEVA"></div><div class="chosen-meta"><b>Llavero de tela</b><span>3,50 €</span></div></article>
-  <article class="chosen-card"><div class="chosen-photo"><img src="assets/products/lanyard_burdeos.jpg" alt="Lanyard MEVA"></div><div class="chosen-meta"><b>Lanyard de tela</b><span>5 €</span></div></article>
-  <article class="chosen-card"><div class="chosen-photo" aria-hidden="true"></div><div class="chosen-meta"><b>Pack bebé</b><span>16 €</span></div></article>
-  <article class="chosen-card"><div class="chosen-photo" aria-hidden="true"></div><div class="chosen-meta"><b>Neceser</b><span>Desde 9 €</span></div></article>
-</div></div></section>
+<div class="chosen-strip" aria-label="Los más elegidos">{{FEATURED}}</div></div></section>
 <section><div class="container how how-single"><div class="how-copy"><span class="eyebrow" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff"><i></i>HAZLO TUYO</span><h2>Tu idea, a tu manera.</h2><p>Empieza por una pieza y personalízala con el tejido, el texto y los detalles que más te gusten.</p><div class="steps"><div class="step"><b>1</b><span>Elige producto</span></div><div class="step"><b>2</b><span>Elige tejido</span></div><div class="step"><b>3</b><span>Añade tu detalle</span></div></div><a class="btn how-cta" href="disena-producto.html">Diseña tu producto →</a></div></div></section>
 
 <section class="bulk-section"><div class="container bulk bulk-inline">
   <div class="bulk-copy">
     <div class="bulk-title-row"><h2 class="bulk-title-one-line">¿Necesitas 20, 50 o 100?</h2><div class="bulk-number-inline">20 · 50 · 100</div></div>
     <p>También preparamos pedidos en volumen para bautizos, celebraciones, profes, grupos o eventos. Cuéntanos la idea y te preparamos propuesta.</p>
-    <div class="hero-actions"><a class="btn primary" href="eventos.html">Ver eventos</a><a class="btn secondary" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20consultar%20un%20pedido%20de%20varias%20unidades" target="_blank">Pedir presupuesto</a></div>
+    <div class="hero-actions"><a class="btn primary" href="eventos.html">Ver eventos</a><a class="btn secondary" href="https://wa.me/{{WHATSAPP}}?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20consultar%20un%20pedido%20de%20varias%20unidades" target="_blank">Pedir presupuesto</a></div>
   </div>
 </div></section>
-<section><div class="container instagram"><a href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank"><img src="assets/instagram-feed.png" alt="Instagram @meva.labs"></a><div><span class="eyebrow" style="background:#15191b;border-color:#333;color:#fff"><i></i>INSTAGRAM</span><h2>@meva.labs</h2><p>Ideas, pruebas, errores y todo lo que va saliendo del lab. Síguenos para ver el proceso de cerca.</p><a class="btn" href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank">Ver Instagram →</a></div></div></section></main><a class="wa-float" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B" target="_blank" aria-label="WhatsApp">💬</a><footer class="footer"><div class="container footer-box"><div><img class="footer-logo" src="assets/logo-meva.png" alt="MEVA"><p>Detalles hechos a mano para ser tuyos</p></div><div><b>Explorar</b><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a></div><div><b>MEVA</b><a href="disena-producto.html">Diseña tu producto</a><a href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank">@meva.labs</a><a href="https://wa.me/34617168053" target="_blank">WhatsApp</a><a href="mailto:mevapersonalizado@gmail.com">mevapersonalizado@gmail.com</a></div></div></footer><script>
+<section><div class="container instagram"><a href="{{INSTAGRAM_URL}}" target="_blank"><img src="assets/instagram-feed.png" alt="Instagram {{INSTAGRAM_HANDLE}}"></a><div><span class="eyebrow" style="background:#15191b;border-color:#333;color:#fff"><i></i>INSTAGRAM</span><h2>{{INSTAGRAM_HANDLE}}</h2><p>Ideas, pruebas, errores y todo lo que va saliendo del lab. Síguenos para ver el proceso de cerca.</p><a class="btn" href="{{INSTAGRAM_URL}}" target="_blank">Ver Instagram →</a></div></div></section></main><a class="wa-float" href="https://wa.me/{{WHATSAPP}}?text=Hola%20MEVA%20%F0%9F%91%8B" target="_blank" aria-label="WhatsApp">💬</a><footer class="footer"><div class="container footer-box"><div><img class="footer-logo" src="assets/logo-meva.png" alt="MEVA"><p>Detalles hechos a mano para ser tuyos</p></div><div><b>Explorar</b><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a></div><div><b>MEVA</b><a href="disena-producto.html">Diseña tu producto</a><a href="{{INSTAGRAM_URL}}" target="_blank">{{INSTAGRAM_HANDLE}}</a><a href="https://wa.me/{{WHATSAPP}}" target="_blank">WhatsApp</a><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div></div></footer><script>
 function toggleMenu(){document.getElementById('mobileMenu')?.classList.toggle('open')}
 document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))document.getElementById('mobileMenu')?.classList.remove('open')});
-document.querySelectorAll('[data-carousel]').forEach(car=>{let i=0;const slides=[...car.querySelectorAll('.slide')],dots=[...car.querySelectorAll('.dot')];function draw(){slides.forEach((s,n)=>s.classList.toggle('active',n===i));dots.forEach((d,n)=>d.classList.toggle('active',n===i))}car.querySelector('.prev')?.addEventListener('click',()=>{i=(i-1+slides.length)%slides.length;draw()});car.querySelector('.next')?.addEventListener('click',()=>{i=(i+1)%slides.length;draw()});draw()});
-</script></body></html>
+</script><script src="assets/carousels.js"></script></body></html>

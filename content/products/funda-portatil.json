@@ -1,0 +1,28 @@
+{
+  "name": "Funda portátil",
+  "slug": "funda-portatil",
+  "category": "Organización",
+  "description": "",
+  "price": 17.0,
+  "embroideredPrice": 19.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/funda_portatil_verde_azul.jpg",
+      "alt": "Fundas de ordenador MEVA"
+    },
+    {
+      "image": "assets/products/funda_portatil_pana_eva.jpg",
+      "alt": "Fundas de ordenador MEVA"
+    },
+    {
+      "image": "assets/products/funda_portatil_burdeos_rosa.jpg",
+      "alt": "Fundas de ordenador MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 5
+}

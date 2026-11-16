@@ -1,0 +1,20 @@
+{
+  "name": "Neceser volantes",
+  "slug": "neceser-volantes",
+  "category": "Organización",
+  "description": "",
+  "price": 10.0,
+  "embroideredPrice": 10.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/neceser_volantes_coral_carmen.jpg",
+      "alt": "Neceser con volantes MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 3
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Babero",
+  "slug": "babero",
+  "category": "Infantil",
+  "description": "",
+  "price": 5.0,
+  "embroideredPrice": 7.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/babero_jirafas.jpg",
+      "alt": "Babero"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 0
+}

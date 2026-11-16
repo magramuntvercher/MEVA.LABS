@@ -1,0 +1,24 @@
+{
+  "name": "Adorno de árbol",
+  "slug": "adorno-de-arbol",
+  "category": "Navidad",
+  "description": "",
+  "price": 5.0,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/adorno_navidad_bea.jpg",
+      "alt": "Adornos de árbol MEVA"
+    },
+    {
+      "image": "assets/products/adorno_navidad_mama.jpg",
+      "alt": "Adornos de árbol MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": true,
+  "order": 2
+}

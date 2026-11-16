@@ -1,0 +1,20 @@
+{
+  "name": "Pack coordinado",
+  "slug": "pack-coordinado",
+  "category": "Packs",
+  "description": "Lanyard + scrunchie",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/pack-lanyard-scrunchie.jpg",
+      "alt": "Pack coordinado MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": true,
+  "order": 1
+}

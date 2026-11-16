@@ -1,0 +1,20 @@
+{
+  "name": "Neceser simple (sin forro)",
+  "slug": "neceser-simple-sin-forro",
+  "category": "Organización",
+  "description": "",
+  "price": 6.0,
+  "embroideredPrice": 7.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/neceser_pequeno_manuela.jpg",
+      "alt": "Neceser pequeño MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 0
+}

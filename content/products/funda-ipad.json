@@ -1,0 +1,20 @@
+{
+  "name": "Funda iPad",
+  "slug": "funda-ipad",
+  "category": "Organización",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/funda_ipad_verde_azul.jpg",
+      "alt": "Funda de iPad MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 8
+}

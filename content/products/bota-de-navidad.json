@@ -1,0 +1,15 @@
+{
+  "name": "Bota de Navidad",
+  "slug": "bota-de-navidad",
+  "category": "Navidad",
+  "description": "",
+  "price": 8.0,
+  "embroideredPrice": 10.0,
+  "priceLabel": "Consultar",
+  "photos": [],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": true,
+  "order": 1
+}

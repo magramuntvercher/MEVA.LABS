@@ -1,0 +1,28 @@
+{
+  "name": "Lanyard",
+  "slug": "lanyard",
+  "category": "Accesorios",
+  "description": "",
+  "price": 5.0,
+  "embroideredPrice": 6.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/lanyard_amarillo_personalizado.jpg",
+      "alt": "Lanyards MEVA"
+    },
+    {
+      "image": "assets/products/lanyard_coral.jpg",
+      "alt": "Lanyards MEVA"
+    },
+    {
+      "image": "assets/products/lanyard_burdeos.jpg",
+      "alt": "Lanyards MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": true,
+  "seasonal": false,
+  "order": 1
+}

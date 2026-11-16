@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MEVA · Navidad</title><meta name="description" content="MEVA: accesorios, infantil y regalos personalizados hechos a mano en Valencia."><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MEVA · Cuadros bordados</title><meta name="description" content="MEVA: accesorios, infantil y regalos personalizados hechos a mano en Valencia."><style>
 :root{--cream:#f7f3e9;--paper:#fffdf8;--olive:#626947;--olive2:#4d5438;--pink:#dba08f;--ink:#20221d;--muted:#72736b;--line:#e4ddcf;--soft:#eef0e6;--shadow:0 18px 50px rgba(57,52,40,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.45}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button,input,select,textarea{font:inherit}.container{width:min(1180px,calc(100% - 30px));margin:auto}
 .topbar{background:var(--olive2);color:#fff;text-align:center;padding:9px 14px;font-size:13px}.site-header{position:sticky;top:0;z-index:100;background:rgba(247,243,233,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(228,221,207,.9)}.nav{height:76px;display:flex;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.08em}.brand img{width:58px;height:58px;object-fit:contain}.desktop-nav{display:flex;gap:22px;margin-left:auto;font-size:14px}.desktop-nav a:hover{color:var(--olive)}.menu-btn{display:none;margin-left:auto;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:21px;cursor:pointer}.mobile-menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 20px 20px;box-shadow:0 18px 40px rgba(0,0,0,.08)}.mobile-menu.open{display:block}.mobile-menu a{display:block;padding:13px 6px;border-bottom:1px solid #eee7da;font-weight:800}.mobile-menu a:last-child{border:0}
@@ -134,6 +134,21 @@ section{padding:68px 0}.eyebrow{display:inline-flex;align-items:center;gap:8px;b
 }
 
 
+.cuadros-section{padding-top:18px}
+.cuadros-cta{background:var(--pink);color:#fff;border-color:var(--pink);margin-bottom:22px}
+.cuadros-cta:hover{background:#c98776;transform:translateY(-2px)}
+.cuadros-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cuadro-placeholder{min-height:280px;border:1px solid var(--line);background:#f2ede3;border-radius:26px;display:grid;place-items:center;color:#9a988f;font-weight:800;letter-spacing:.03em;text-align:center;padding:20px}
+@media(max-width:620px){
+  .cuadros-section{padding-top:8px}
+  .cuadros-cta{width:100%;margin-bottom:16px}
+  .cuadros-gallery{grid-template-columns:1fr 1fr;gap:12px}
+  .cuadro-placeholder{min-height:180px;border-radius:20px;font-size:13px}
+  .cuadro-placeholder:last-child{grid-column:1/-1;min-height:160px}
+}
+
+.cuadro-real{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden}.cuadro-real img{width:100%;height:100%;min-height:280px;object-fit:contain}@media(max-width:620px){.cuadros-gallery{grid-template-columns:1fr 1fr}.cuadro-real img{min-height:210px}}
+
 
 /* --- MEVA V2.19: fotos originales completas dentro del hueco --- */
 /* No se recorta ni se amplía la foto para rellenar el marco. */
@@ -181,23 +196,13 @@ section{padding:68px 0}.eyebrow{display:inline-flex;align-items:center;gap:8px;b
   object-fit:contain !important;
   margin:auto !important;
 }
-</style></head><body><div class="topbar">Envíos 4,50€. Gratis pedidos de más de 50€</div><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo-meva.png" alt="MEVA"><span>MEVA</span></a><nav class="desktop-nav"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a></nav><button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a><a href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank">Instagram</a></div></header><main>
-<section class="catalog-intro"><div class="container">
-  <div class="intro-top"><a class="back" href="index.html">← Volver al inicio</a><span class="eyebrow"><i></i>Navidad</span></div>
-  <p class="intro-copy">Productos y ediciones especiales de temporada, hechos a mano para decorar, regalar y personalizar.</p>
-</div></section>
-<section class="catalog-section"><div class="container"><div class="catalog-grid"><article class="catalog-card">
-      <div class="catalog-gallery carousel" data-carousel aria-label="Cojín de Navidad MEVA"><div class="slide active"><img src="assets/products/cojin_navidad_arbol.jpg" alt="Cojín de Navidad MEVA"></div><div class="dots"><span class="dot active"></span></div></div>
-      <div class="catalog-body"><h2>Cojín de Navidad</h2><div class="catalog-actions"><span class="catalog-pill">Precio <b>8 €</b></span><span class="catalog-pill">Con bordado <b>10 €</b></span><a class="catalog-pill fabric" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20elegir%20la%20tela%20para%20Coj%C3%ADn%20de%20Navidad" target="_blank">Elige tu tela</a></div></div>
-    </article><article class="catalog-card">
-      <div class="catalog-gallery empty" data-product-gallery aria-label="Fotos de Bota de Navidad"></div>
-      <div class="catalog-body"><h2>Bota de Navidad</h2><div class="catalog-actions"><span class="catalog-pill">Precio <b>8 €</b></span><span class="catalog-pill">Con bordado <b>10 €</b></span><a class="catalog-pill fabric" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20elegir%20la%20tela%20para%20Bota%20de%20Navidad" target="_blank">Elige tu tela</a></div></div>
-    </article><article class="catalog-card">
-      <div class="catalog-gallery carousel" data-carousel aria-label="Adornos de árbol MEVA"><div class="slide active"><img src="assets/products/adorno_navidad_bea.jpg" alt="Adornos de árbol MEVA"></div><div class="slide"><img src="assets/products/adorno_navidad_mama.jpg" alt="Adornos de árbol MEVA"></div><button class="arrow prev" type="button" aria-label="Anterior">‹</button><button class="arrow next" type="button" aria-label="Siguiente">›</button><div class="dots"><span class="dot active"></span><span class="dot"></span></div></div>
-      <div class="catalog-body"><h2>Adorno de árbol</h2><div class="catalog-actions"><span class="catalog-pill">Precio <b>5 €</b></span><a class="catalog-pill fabric" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20elegir%20la%20tela%20para%20Adorno%20de%20%C3%A1rbol" target="_blank">Elige tu tela</a></div></div>
-    </article></div></div></section>
-</main><a class="wa-float" href="https://wa.me/34617168053?text=Hola%20MEVA%20%F0%9F%91%8B" target="_blank" aria-label="WhatsApp">💬</a><footer class="footer"><div class="container footer-box"><div><img class="footer-logo" src="assets/logo-meva.png" alt="MEVA"><p>Detalles hechos a mano para ser tuyos</p></div><div><b>Explorar</b><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a></div><div><b>MEVA</b><a href="disena-producto.html">Diseña tu producto</a><a href="https://www.instagram.com/meva.labs?exln=dDdpdnR4eXJ2ZXFs" target="_blank">@meva.labs</a><a href="https://wa.me/34617168053" target="_blank">WhatsApp</a><a href="mailto:mevapersonalizado@gmail.com">mevapersonalizado@gmail.com</a></div></div></footer><script>
+</style></head><body><div class="topbar">{{SHIPPING_BANNER}}</div><header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo-meva.png" alt="MEVA"><span>MEVA</span></a><nav class="desktop-nav"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a></nav><button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">☰</button></div><div class="mobile-menu" id="mobileMenu"><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a><a href="disena-producto.html">Diseña tu producto</a><a href="{{INSTAGRAM_URL}}" target="_blank">Instagram</a></div></header><main><section class="page-hero"><div class="container"><a class="back" href="index.html">← Volver al inicio</a><span class="eyebrow"><i></i>Cuadros bordados</span><h1>Cuadros bordados.</h1><p>Diseños decorativos, frases especiales y cuadros personalizados.</p></div></section><section class="cuadros-section"><div class="container">
+  <a class="btn cuadros-cta" href="https://wa.me/{{WHATSAPP}}?text=Hola%20MEVA%20%F0%9F%91%8B%20Quiero%20hacer%20mi%20propio%20cuadro" target="_blank">Quiero hacer mi propio cuadro</a>
+  <div class="cuadros-gallery" aria-label="Galería de cuadros bordados">{{CUADROS}}
+    
+    
+  </div>
+</div></section></main><a class="wa-float" href="https://wa.me/{{WHATSAPP}}?text=Hola%20MEVA%20%F0%9F%91%8B" target="_blank" aria-label="WhatsApp">💬</a><footer class="footer"><div class="container footer-box"><div><img class="footer-logo" src="assets/logo-meva.png" alt="MEVA"><p>Detalles hechos a mano para ser tuyos</p></div><div><b>Explorar</b><a href="accesorios.html">Accesorios</a><a href="organizacion.html">Organización</a><a href="infantil.html">Infantil</a><a href="packs.html">Packs</a><a href="cuadros.html">Cuadros bordados</a><a href="navidad.html">Navidad</a><a href="eventos.html">Eventos</a></div><div><b>MEVA</b><a href="disena-producto.html">Diseña tu producto</a><a href="{{INSTAGRAM_URL}}" target="_blank">{{INSTAGRAM_HANDLE}}</a><a href="https://wa.me/{{WHATSAPP}}" target="_blank">WhatsApp</a><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div></div></footer><script>
 function toggleMenu(){document.getElementById('mobileMenu')?.classList.toggle('open')}
 document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))document.getElementById('mobileMenu')?.classList.remove('open')});
-document.querySelectorAll('[data-carousel]').forEach(car=>{let i=0;const slides=[...car.querySelectorAll('.slide')],dots=[...car.querySelectorAll('.dot')];function draw(){slides.forEach((s,n)=>s.classList.toggle('active',n===i));dots.forEach((d,n)=>d.classList.toggle('active',n===i))}car.querySelector('.prev')?.addEventListener('click',()=>{i=(i-1+slides.length)%slides.length;draw()});car.querySelector('.next')?.addEventListener('click',()=>{i=(i+1)%slides.length;draw()});draw()});
-</script></body></html>
+</script><script src="assets/carousels.js"></script></body></html>

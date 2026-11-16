@@ -1,0 +1,20 @@
+{
+  "name": "Chupetero",
+  "slug": "chupetero",
+  "category": "Infantil",
+  "description": "",
+  "price": 5.0,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/chupetero_jirafas.jpg",
+      "alt": "Chupetero"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 3
+}

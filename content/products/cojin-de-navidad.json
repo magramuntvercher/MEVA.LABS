@@ -1,0 +1,20 @@
+{
+  "name": "Cojín de Navidad",
+  "slug": "cojin-de-navidad",
+  "category": "Navidad",
+  "description": "",
+  "price": 8.0,
+  "embroideredPrice": 10.0,
+  "priceLabel": "Consultar",
+  "photos": [
+    {
+      "image": "assets/products/cojin_navidad_arbol.jpg",
+      "alt": "Cojín de Navidad MEVA"
+    }
+  ],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": true,
+  "order": 0
+}

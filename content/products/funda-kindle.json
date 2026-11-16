@@ -1,0 +1,15 @@
+{
+  "name": "Funda Kindle",
+  "slug": "funda-kindle",
+  "category": "Organización",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 7
+}

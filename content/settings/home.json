@@ -1,0 +1,44 @@
+{
+  "seasonTitle": "Navidad",
+  "seasonNote": "Edición limitada",
+  "featured": [
+    {
+      "product": "llavero",
+      "label": "Llavero de tela",
+      "photo": "assets/products/llavero_coral_gris.jpg",
+      "priceLabel": ""
+    },
+    {
+      "product": "lanyard",
+      "label": "Lanyard de tela",
+      "photo": "assets/products/lanyard_burdeos.jpg",
+      "priceLabel": ""
+    },
+    {
+      "product": "pack-bebe",
+      "label": "",
+      "photo": "",
+      "priceLabel": "16 €"
+    },
+    {
+      "product": "neceser",
+      "label": "",
+      "photo": "",
+      "priceLabel": "Desde 9 €"
+    }
+  ],
+  "seasonal": [
+    {
+      "product": "pack-coordinado",
+      "label": "",
+      "photo": "assets/pack-lanyard-scrunchie.jpg",
+      "subtitle": "Lanyard + scrunchie"
+    },
+    {
+      "product": "pack-bebe",
+      "label": "",
+      "photo": "assets/pack-bebe.jpg",
+      "subtitle": "Un detalle especial"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Funda de libro",
+  "slug": "funda-de-libro",
+  "category": "Organización",
+  "description": "",
+  "price": null,
+  "embroideredPrice": null,
+  "priceLabel": "Consultar",
+  "photos": [],
+  "available": true,
+  "chooseFabric": true,
+  "featured": false,
+  "seasonal": false,
+  "order": 6
+}
