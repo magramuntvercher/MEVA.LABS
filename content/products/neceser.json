@@ -1,11 +1,4 @@
 {
-  "name": "Neceser",
-  "slug": "neceser",
-  "category": "Organización",
-  "description": "",
-  "price": 7.0,
-  "embroideredPrice": 8.0,
-  "priceLabel": "Consultar",
   "photos": [
     {
       "image": "assets/products/neceser_grande_floral.jpg",
@@ -14,11 +7,22 @@
     {
       "image": "assets/products/neceser_grande_burdeos.jpg",
       "alt": "Neceser grande MEVA"
+    },
+    {
+      "alt": "",
+      "image": "/assets/uploads/20261108_180126.jpg"
     }
   ],
+  "price": 7,
   "available": true,
-  "chooseFabric": true,
+  "name": "Neceser",
+  "slug": "neceser",
+  "embroideredPrice": 8,
+  "priceLabel": "Consultar",
   "featured": true,
   "seasonal": false,
-  "order": 1
+  "order": 1,
+  "chooseFabric": true,
+  "description": "",
+  "category": "Organización"
 }
